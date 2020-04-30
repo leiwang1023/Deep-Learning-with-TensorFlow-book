@@ -12,6 +12,9 @@ import numpy as np
 
 # y = wx + b
 def compute_error_for_line_given_points(b, w, points):
+    '''
+    计算的是均方误差
+    '''
     totalError = 0
     for i in range(0, len(points)):
         x = points[i, 0]
@@ -67,4 +70,10 @@ def run():
           )
 
 if __name__ == '__main__':
+    #以下改变运行目录，从而找到data.csv
+    if 0:
+        import os
+        print(os.getcwd())
+        os.chdir('./ch02-回归问题')
     run()
+    
